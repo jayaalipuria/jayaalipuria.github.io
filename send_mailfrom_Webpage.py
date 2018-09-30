@@ -25,6 +25,8 @@ d={}
 d[NAME] = formData.getvalue("NAME")
 d[EMAIL] = formData.getvalue("EMAIL")
 d[Feedback] = formData.getvalue("Feedback")
+for i in d:
+    print ("%s: %s"%(i,d[i]))
 
 #part1= MIMEText(html_txt,"html")
 #the_msg.attach(part1)
