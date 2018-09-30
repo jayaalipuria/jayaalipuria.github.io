@@ -2,7 +2,9 @@
 from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
 import smtplib
-import cgi
+import cgi,cgitb
+cgitb.enable()
+
 
 host = 'smtp.gmail.com'
 port = 587
