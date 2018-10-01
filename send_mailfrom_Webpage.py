@@ -5,7 +5,7 @@ import smtplib
 import cgi,cgitb
 cgitb.enable()
 
-ScriptAlias "/cgi-bin/" "/usr/local/apache2/cgi-bin/"
+#ScriptAlias "/cgi-bin/" "/usr/local/apache2/cgi-bin/"
 
 formData = cgi.FieldStorage()
 d={}
