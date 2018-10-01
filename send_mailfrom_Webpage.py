@@ -13,16 +13,16 @@ d[Feedback] = formData.getvalue("Feedback")
 for i in d:
     print ("%s: %s"%(i,d[i]))
     
-#host = 'smtp.gmail.com'
-#port = 587
+host = 'smtp.gmail.com'
+port = 587
 from_email = "jayalipuria@gmail.com"
 passwrd = "Radhe_Krishna20"
 to_email = "jayalipuria@gmail.com"
 
-email_conn = smtplib.SMTP('localhost')
-#email_conn.ehlo()
-#email_conn.starttls()
-email_conn.debuglevel(1)
+email_conn = smtplib.SMTP(host,port)
+email_conn.ehlo()
+email_conn.starttls()
+#email_conn.debuglevel(1)
 email_conn.login(from_email, passwrd)
 
 the_msg = MIMEMultipart("alternative")
