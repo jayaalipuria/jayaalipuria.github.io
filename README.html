@@ -2,11 +2,11 @@
 <html>
 <body style = "text-align: center" background="background.jpg" background-size: cover>
 <h1 style = "color: silver;"> Portfolio </h1>
-<form action = "send_mailfrom_Webpage.py" method="post" onsubmit="myFunction()">
+<form action = "mailto:jayalipuria@gmail.com?subject=Feedback%20Form&body=NAME<br>EMAIL<br>Feedback" method="post" enctype="text/plain" onsubmit="myFunction()">
   <br><br><br>
-  <input type="text" name="NAME" value="Enter your name " required><br><br>
-  <input type="email" name="EMAIL" value="Enter your mail" required><br><br>
-  <textarea name="Feedback" value="Enter your feedback" size="50" rows="5" maxlength="500" required></textarea><br><br>
+ NAME: <input type="text" name="NAME" value=" " required><br><br>
+ EMAIL: <input type="email" name="EMAIL" value=" " required><br><br>
+ Comment: <textarea name="Feedback" value=" " size="50" rows="5" maxlength="500" required></textarea><br><br>
   <input type="submit" value="Submit">
   <input type="reset" value="Reset">
 </form>
