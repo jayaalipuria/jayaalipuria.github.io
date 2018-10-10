@@ -1,20 +1,16 @@
-#!C:\Python34\python
+#!C:/Python34/python
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
-import cgi,cgitb
-cgitb.enable()
+import cgi
+import cgitb; cgitb.enable()
 
-print ("Content-Type: text/html\n\n")
+form = cgi.FieldStorage()
+d[NAME] = form.getvalue("NAME")
+d[EMAIL] = form.getvalue("EMAIL")
+d[Feedback] = form.getvalue("Feedback")
 
-formData = cgi.FieldStorage()
-d={}
-d[NAME] = formData.getvalue("NAME")
-d[EMAIL] = formData.getvalue("EMAIL")
-d[Feedback] = formData.getvalue("Feedback")
-for i in d:
-    print ("%s: %s"%(i,d[i]))
-    
+ 
 from_email = "jayalipuria@gmail.com"
 passwrd = "Radhe_Krishna20"
 to_email = "jayalipuria@gmail.com"
@@ -36,5 +32,7 @@ email_conn.set_debuglevel(1)
 email_conn.ehlo()
 email_conn.starttls()
 email_conn.login(from_email, passwrd)
-email_conn.sendmail(from_email,to_email,the_msg.as_string())
+email_conn.sendmail(from_email,to_email,the_msg)
+print ("Content-type:text/html\r\n\r\n")
+print ("Successfully sent the mail")
 email_conn.quit()
