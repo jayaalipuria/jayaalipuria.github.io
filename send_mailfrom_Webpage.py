@@ -6,14 +6,15 @@ import cgi
 import cgitb; cgitb.enable()
 
 form = cgi.FieldStorage()
+d={}
 d[NAME] = form.getvalue("NAME")
 d[EMAIL] = form.getvalue("EMAIL")
 d[Feedback] = form.getvalue("Feedback")
 
  
-from_email = "jayalipuria@gmail.com"
-passwrd = "Radhe_Krishna20"
-to_email = "jayalipuria@gmail.com"
+from_email = "abc@gmail.com"
+passwrd = "*****"
+to_email = "abc@gmail.com"
 
 
 the_msg = MIMEMultipart("alternative")
